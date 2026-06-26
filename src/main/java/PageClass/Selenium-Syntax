@@ -1,0 +1,59 @@
+// intialize browser
+driver.get("url");
+//Synchronization
+implicit = driver().manage().timeOuts().implicitWait(Duration.OfSecond(100));
+Explicit = webDriverWait wait = new webDriverWait(driver)
+WebElement ele = wait.util(ExcpatedCondition.elementToBeVisiable(driver.findElement(By.id("ligin");
+
+Fluent = FluentWait wait = new <FluentWait> (driver)
+.withTime(Duration.OfSecond(500))
+.poolingPeriod(Duration.OfSecond(500))
+.ignoring(NoSuchElementException().class);
+
+
+// Windows Handlenning
+String parent = driver.getWindowHandle();
+for(WebElements parent : window){
+Set<String> allWindows = driver.getWindowHandles();
+if(!window.equalsTo(allWindows)){
+driver.switchTo().window(parent);
+driver.defaultContent(window);
+driver.quit();
+// Pop up
+webElement alert = driver.switchTo().alert()
+alert.accept();
+alert.dismiss();
+alert.getText();
+
+//Frame
+ element frame = driver.switchTo().Frame();
+ frame.name();
+ frame.Id();
+ frame.webElement();
+ driver.defaultContent();
+
+ //ScreenShot
+ takeScreenshot shot = new takeScreenshot(driver);
+ FileInput src = shot.getScreenShotAs(OutPutType.FILE);
+ FileOutput des = new filePath("path");
+ FileUtil.CopyFile(src, des);
+
+
+ //Excel Read and Write
+ FileInputStream file = new FileInputStream();
+ XSSFWorkBook work = new XSSFWorkBook(file);
+ FileSheet sheet = work.excelSheet();
+ Rows row = sheet.row(1);
+ Cell cell =row.cell(3);
+ //NoSuchElementException
+
+ driver.get("url");
+ boolean log = driver.findElement(By.xpath("*******").isDisplayed();
+ if(log==true){
+ System.out.println("Log is available");
+ }
+ else {
+
+ System.out.println("Log is not available");
+
+ }
